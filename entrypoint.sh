@@ -40,17 +40,18 @@ fi
 echo "==> Prepare to deploy"
 
 git init
-echo "${GITHUB_ACTOR}"
-git config user.name
 git config user.name "${GITHUB_ACTOR}"
 git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+
+echo "${GITHUB_ACTOR}@users.noreply.github.com"
+git status --porcelain
 
 if [ -z "$(git status --porcelain)" ]; then
     echo "The BUILD_DIR is setting error or nothing produced" && \
     echo "Exiting..."
     exit 0
 fi
-
+echo "logggggg"
 # Generate a CNAME file
 if [ "$CNAME" ]; then
   echo "Generating a CNAME file..."
