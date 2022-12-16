@@ -17,6 +17,8 @@ echo "Build success"
 echo "==> Changing directory to '$BUILD_DIR' ..."
 cd $BUILD_DIR
 
+git config --global --add safe.directory "*"
+
 # Get respository
 if [[ -z "$TARGET_REPO" ]]; then
   REPOSITORY_NAME="${GITHUB_REPOSITORY}"
