@@ -40,7 +40,8 @@ fi
 echo "==> Prepare to deploy"
 
 git init
-ls -a
+echo "${GITHUB_ACTOR}"
+git config user.name
 git config user.name "${GITHUB_ACTOR}"
 git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
 
