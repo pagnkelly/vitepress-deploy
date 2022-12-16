@@ -38,7 +38,7 @@ if [ "$TARGET_LINK" ]; then
 fi
 
 echo "==> Prepare to deploy"
-
+rm -rf .git
 git init
 git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
 git config user.name "${GITHUB_ACTOR}"
