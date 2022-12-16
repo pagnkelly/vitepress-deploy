@@ -1,0 +1,6 @@
+{
+  "name": "vitepress-deploy",
+  "description": "A GitHub Action to build and deploy Vitepress sites to GitHub Pages",
+  "license": "MIT",
+  "repository": "https://github.com/pagnkelly/vitepress-deploy"
+}
