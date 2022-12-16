@@ -8,8 +8,6 @@ echo ''
 echo "node version: $(node -v)"
 echo "npm version: $(npm -v)"
 
-npm i -g pnpm
-
 # Build vuepress project
 echo "==> Start building \n $BUILD_SCRIPT"
 eval "$BUILD_SCRIPT"
@@ -42,6 +40,7 @@ fi
 echo "==> Prepare to deploy"
 
 git init
+ls -a
 git config user.name "${GITHUB_ACTOR}"
 git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
 
