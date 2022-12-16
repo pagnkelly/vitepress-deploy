@@ -23,19 +23,20 @@ if [[ -z "$TARGET_REPO" ]]; then
 else
   REPOSITORY_NAME="$TARGET_REPO"
 fi
-
+echo $REPOSITORY_NAME
 # Get branch
 if [[ -z "$TARGET_BRANCH" ]]; then
   DEPLOY_BRAN="gh-pages"
 else
   DEPLOY_BRAN="$TARGET_BRANCH"
 fi
-
+echo $DEPLOY_BRAN
 # Final repository
 DEPLOY_REPO="https://username:${ACCESS_TOKEN}@github.com/${REPOSITORY_NAME}.git"
 if [ "$TARGET_LINK" ]; then
   DEPLOY_REPO="$TARGET_LINK"
 fi
+echo $DEPLOY_REPO
 
 echo "==> Prepare to deploy"
 rm -rf .git
